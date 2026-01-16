@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { PropertyCard } from '../../utils/Interfaces/property-card';
-import { PropertyCardList } from '../../utils/Services/property.service';
+import { PropertyServicesService } from 'src/utils/Services/property-services.service';
 
 @Component({
   selector: 'app-property-card-box',
@@ -8,9 +8,8 @@ import { PropertyCardList } from '../../utils/Services/property.service';
   styleUrls: ['./property-card-box.component.css'],
 })
 export class PropertyCardBoxComponent {
-    protected propertyCardList : PropertyCard[] = [];
-
-    constructor(propertyCardL : PropertyCardList){
-      this.propertyCardList = propertyCardL;
-    }
+  propertyCardList: PropertyCard[] = [];
+  constructor(propertyService: PropertyServicesService) {
+    this.propertyCardList = propertyService.getPropertyList();
+  }
 }

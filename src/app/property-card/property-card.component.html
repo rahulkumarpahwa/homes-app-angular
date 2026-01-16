@@ -16,8 +16,7 @@
     <p>Units : {{ propertyCard.availableUnits }}</p>
     <p>Wifi : {{ propertyCard.wifi }}</p>
     <p>Laundry : {{ propertyCard.laundry }}</p>
-    <!-- <a routerLink="details">Details</a>
-    router link provided by the RouterModule. also not add the "/" in the path -->
-    <a [routerLink]="['/details', propertyCard.id]">Details</a>
+    <a [routerLink]="['/details/', propertyCard.id]">Details</a>
+    <a [href]="'/details/' + propertyCard.id">Details</a>
   </div>
 </div>

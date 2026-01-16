@@ -1,4 +1,17 @@
 <div class="flex flex-col items-center justify-center">
+    <h2>{{ propertyCard?.name }}</h2>
+    <p>
+      <img src="/assets/locationpin.svg" alt="" />{{ propertyCard?.city }},
+      {{ propertyCard?.state }}
+    </p>
+    <p>Units : {{ propertyCard?.availableUnits }}</p>
+    <p>Wifi : {{ propertyCard?.wifi }}</p>
+    <p>Laundry : {{ propertyCard?.laundry }}</p>
+    <a [routerLink]="['/details/', propertyCard?.id]">Details</a>
+    <a [href]="'/details/' + propertyCard?.id">Details</a>
+  </div>
+
+<div class="flex flex-col items-center justify-center">
   <h2>{{ propertyId}}</h2>
   <!-- <p>
     <img src="/assets/locationpin.svg" alt="" />{{ propertyDetails.city }},
