@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { PropertyCardComponent } from './property-card/property-card.component';
 import { PropertyCardBoxComponent } from './property-card-box/property-card-box.component';
 import { AboutComponent } from './about/about.component';
+import { PropertyDetailsComponent } from './property-details/property-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PropertyCardComponent,
     PropertyCardBoxComponent,
-    AboutComponent
+    AboutComponent,
+    PropertyDetailsComponent
   ],
   imports: [
     BrowserModule,
