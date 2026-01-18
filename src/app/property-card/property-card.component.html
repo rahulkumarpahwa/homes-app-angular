@@ -16,7 +16,7 @@
     <p>Units : {{ propertyCard.availableUnits }}</p>
     <p>Wifi : {{ propertyCard.wifi }}</p>
     <p>Laundry : {{ propertyCard.laundry }}</p>
-    <a [routerLink]="['/details/', propertyCard.id]">Details</a>
+    <a [routerLink]="['details', propertyCard.id]">Details</a>
     <a [href]="'/details/' + propertyCard.id">Details</a>
   </div>
 </div>

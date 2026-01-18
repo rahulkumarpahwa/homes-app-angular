@@ -116,4 +116,8 @@ export class PropertyServicesService {
   getPropertyById(id: number): PropertyCard | undefined {
     return this.propertyList.find(property => property.id == id);
   }
+
+  postAppliedForm(firstName: String, lastName: String, email: String): undefined {
+    console.log("Name : " + firstName + " " + lastName + " \n" + "Email : " + email);
+  }
 }

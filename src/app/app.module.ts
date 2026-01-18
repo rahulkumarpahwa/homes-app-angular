@@ -7,6 +7,8 @@ import { PropertyCardComponent } from './property-card/property-card.component';
 import { PropertyCardBoxComponent } from './property-card-box/property-card-box.component';
 import { AboutComponent } from './about/about.component';
 import { PropertyDetailsComponent } from './property-details/property-details.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ApplyFormComponent } from './apply-form/apply-form.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { PropertyDetailsComponent } from './property-details/property-details.co
     PropertyCardComponent,
     PropertyCardBoxComponent,
     AboutComponent,
-    PropertyDetailsComponent
+    PropertyDetailsComponent,
+    ApplyFormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
