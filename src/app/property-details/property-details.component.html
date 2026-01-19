@@ -4,6 +4,13 @@
     <img src="/assets/locationpin.svg" alt="" />{{ propertyCard?.city }},
     {{ propertyCard?.state }}
   </p>
+  <div class="w-50 h-50">
+    <img
+      [src]="propertyCard?.photo"
+      [alt]="'Image of property with name : ' + propertyCard?.name"
+      class="w-full"
+    />
+  </div>
   <p>Units : {{ propertyCard?.availableUnits }}</p>
   <p>Wifi : {{ propertyCard?.wifi }}</p>
   <p>Laundry : {{ propertyCard?.laundry }}</p>

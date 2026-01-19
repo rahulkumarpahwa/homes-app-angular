@@ -18,6 +18,7 @@ export class PropertyDetailsComponent {
   constructor(propertyService: PropertyServicesService) {
     // console.log(this.activatedRoute.snapshot.params); // params is an object.
     this.id = Number(this.activatedRoute.snapshot.params['id']);
-    this.propertyCard = propertyService.getPropertyById(this.id);
+    // this.propertyCard = propertyService.getPropertyById(this.id);
+    propertyService.getPropertyById(this.id).then((property) => (this.propertyCard = property));
   }
 }

@@ -10,6 +10,7 @@ import { PropertyServicesService } from 'src/utils/Services/property-services.se
 export class PropertyCardBoxComponent {
   propertyCardList: PropertyCard[] = [];
   constructor(propertyService: PropertyServicesService) {
-    this.propertyCardList = propertyService.getPropertyList();
+    console.log(this.propertyCardList);
+    propertyService.getPropertyList().then((propertyCardLt: PropertyCard[]) => (this.propertyCardList = propertyCardLt));
   }
 }
